@@ -1,0 +1,70 @@
+body {
+    background-image: url(../media/bg/beach.jpg);
+    background-position-y: bottom;
+    overflow: hidden;  
+}
+
+main {
+    position: relative; /* needed for #VioletEvergarden */
+}
+
+#VioletEvergarden {
+    position: absolute;
+    bottom: 0;
+    height: 105%; /* width: 45%; is also good */
+    z-index: 1; /* less than header */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+}
+
+#VioletEvergarden:hover {
+    cursor: pointer;
+    transform: translateX(-50%) scale(1.1);
+}
+
+#pop-up {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s;
+    font-family: 'Telsis';
+    font-size: 21px;
+}
+
+#Letter { 
+    height: 95%;    
+}
+
+.pop-up__text {
+    color: black;
+    position: absolute;
+    padding: 0 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+span {
+    color: red;
+    font-weight: bold;
+}
+
+.pop-up__options {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0px;
+}
+
+#Translate {
+    display: inline;
+}

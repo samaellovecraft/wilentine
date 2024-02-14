@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Telsis';
+    src: url('../fonts/Telsis/Language\ Of\ Tellsis-Regular.ttf') format('truetype'),
+         url('../fonts/Telsis/Language\ Of\ Tellsis-Regular.otf') format('opentype');
+}
+
+:root {
+    --header-height: 75px;
+    font-family: 'Telsis';
+}
+
+body {
+    /* min-height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: var(--header-height);
+    z-index: 2;
+}
+
+main {
+    flex: 1 1 auto;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 35px;
+}
+
+.navbar__brand a {
+    padding-right: 0px;
+    padding-left: 21px;
+}
+
+.navbar__link {
+    line-height: var(--header-height);
+    padding-right: 21px;
+}
+
+a {
+    color: white;
+    text-shadow: 
+    -1px -1px 10px black,
+     1px -1px 10px black,
+    -1px  1px 10px black,
+     1px  1px 10px black;
+    transition: 0.3s ease 0s;
+}
+
+a:hover {
+    color: black;
+    text-shadow: 
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+}
